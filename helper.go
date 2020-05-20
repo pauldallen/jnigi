@@ -3,7 +3,6 @@ package jnigi
 import (
 	"os"
 	"runtime"
-	"log"
 	"path/filepath"
 )
 
