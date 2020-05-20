@@ -41,7 +41,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/timob/jnigi"
+	"github.com/pauldallen/jnigi"
 	"log"
 )
 
