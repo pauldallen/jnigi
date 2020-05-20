@@ -20,7 +20,7 @@ func AttemptToFindJVMLibPath() string {
 			prefix = "/usr/lib/jvm/default-java"
 		}
 	}
-	dirPath := filepath.Join(prefix, "jre", "lib", runtime.GOARCH, "server")
+	dirPath := filepath.Join(prefix, "lib", "server")
 	log.Println("got dirPath" + dirPath)
 	var libPath string
 	if runtime.GOOS == "windows" {
