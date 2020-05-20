@@ -10,7 +10,6 @@ import (
 // AttemptToFindJVMLibPath tries to find the full path to the JVM shared library file
 func AttemptToFindJVMLibPath() string {
 	prefix := os.Getenv("JAVA_HOME")
-	log.Println("got prefix" + prefix)
 	if prefix == "" {
 		if runtime.GOOS == "windows" {
 			prefix = filepath.Join("c:", "Program Files", "Java", "jdk")
@@ -21,7 +20,6 @@ func AttemptToFindJVMLibPath() string {
 		}
 	}
 	dirPath := filepath.Join(prefix, "lib", "server")
-	log.Println("got dirPath" + dirPath)
 	var libPath string
 	if runtime.GOOS == "windows" {
 		libPath = filepath.Join(dirPath, "jvm.dll")
@@ -30,7 +28,6 @@ func AttemptToFindJVMLibPath() string {
 	} else {
 		libPath = filepath.Join(dirPath, "libjvm.so")
 	}
-	log.Println("returning libPath" + libPath)
 	
 	return libPath
 }
