@@ -25,8 +25,8 @@ func AttemptToFindJVMLibPath() string {
 	} else if runtime.GOOS == "darwin" {
 		libPath = filepath.Join(dirPath, "libjvm.dylib")
 	} else {
-		libPath = filepath.Join(dirPath, "libjvm.so")
+		libPath = filepath.Join(prefix, "jre", "lib", runtime.GOARCH, "server", "libjvm.so")
 	}
-	
+
 	return libPath
 }
